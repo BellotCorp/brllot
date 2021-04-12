@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Belot d.o.o">
+        <meta name="keywords" content="HTML,Bela,Belot,SJIWP,Mreze">
+        <meta name="author" content="Ekipa">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      </head>
+<title>
+  Bellot
+</title>
+<link rel="stylesheet" href="dizajn.css">
+<link rel="icon" type="image" href="logo.png">
+<body>
+
+<header>
+
+<!--GAS-->
+
+  <ul>
+    
+    <li><img class="n" src="logo.png" alt="Error" width="250px" height="250px;"></li>
+    <li>
+      <!--KEENCR-->
+      
+      <div class="smece">
+      <div class="sredina">
+      <div class="naslov">
+
+      <div href="index.html">Bellot</div>
+    </div>
+  </div>
+</div>
+  
+  </li>
+     <li style="float:right"><b><a href="index.html" class="sada">HOME</a></b></li>
+     <li style="float:right"><a href="o_nama.html">O nama</a></li>
+     <li style="float:right"><a href="programiranje.html">Programiranje</a></li>
+     <li style="float:right"><a href="racunalne_mreze.html">Računalne mreže</a></li>
+     <li style="float:right"><a href="web_sjedista.html" >Web sjedišta</a></li>
+     <li style="float:right"><a href="baze.html">Baze podataka</a></li>
+   </ul>
+  
+   
+</header>
+
+      <!--kraj KEENCR a-->
+
+
+
+
+<div class="tekst">
+
+<p>
+Tvrtka "Bellot" među prvima u Hrvatskoj počela se baviti izradom web sjedišta, bazama podataka, programiranjem te 
+dijagnostikom i održavanjem računalnih mreža i sustava.
+Mladi članovi ove tvrtke ujedno su i učenici Tehničke škole Ruđera Boškovića, konkretan smjer tehničari za računalstvo. 
+Pojedinci (skriven identitet) se izvan škole bave robotikom, zidarstvom, nogometom, učenjem, profesionalnom gaming karijerom i dr.
+</p>
+<p>
+  Poslovanje ipak prati stručni kadar koji svojim rukovođenjem, analizama i prijedlozima omogućava njeno uspješno poslovanje.
+  Sigurni smo da ćemo kvalitetom naših programa i usluga koje pružamo zadovoljiti Vašim zahtjevima i potrebama.
+</p>
+<br>
+
+<img src="HOME/škola.webp" alt="Tadija Jedi" width="1000">
+<br>
+<br>
+<div class="citat">
+  <i>Sve ovo su samo normalni ljudi, a svaka sličnost s drugim pohađaocima Ruđera ili nekim drugim  bićima slučajna je i ne namjerna.</i> 🙂
+  </div>
+<br>
+<br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.3643893879257!2d16.025005715843285!3d45.80396021872831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d62b9997c3c1%3A0x9f31156de34a1b73!2zVGVobmnEjWthIMWha29sYSBSdcSRZXJhIEJvxaFrb3ZpxIdh!5e0!3m2!1shr!2shr!4v1618209178585!5m2!1shr!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<div class="tekst">
+  <p style="border:5px dashed grey; padding:10px; align-items:center; margin-left:auto; margin-right:auto; width:fit-content;">
+  Za sve potrebne usluge, upite i žalbe:
+  </p>
+</div>
+
+<!--KNCER form a-->
+
+<form id="regForm" action="/action_page.php" >
+  <h1 style="color:whitesmoke;">Kontaktirajte nas:</h1>
+  
+  <div class="tab" style="color:whitesmoke;font-size:20px;"> Vaše Ime i prezime:
+    <p><input placeholder="Ime..." oninput="this.className = ''" name="fname"></p>
+    <p><input placeholder="Prezime..." oninput="this.className = ''" name="lname"></p>
+  </div>
+  <div class="tab" style="color:whitesmoke;font-size:29px;">Vaš kontakt:
+    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+    <p><input placeholder="Mobitel..." oninput="this.className = ''" name="phone"></p>
+  </div>
+
+
+  <div style="overflow:auto;">
+    <div style="float:center;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Prethodno</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Dalje</button>
+    </div>
+  </div>
+ 
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    
+  </div>
+</form>
+
+<script>
+  var currentTab = 0; 
+  showTab(currentTab); 
+  
+  function showTab(n) {
+  
+    var x = document.getElementsByClassName("tab");
+    x[n].style.display = "block";
+  
+    if (n == 0) {
+      document.getElementById("prevBtn").style.display = "none";
+    } else {
+      document.getElementById("prevBtn").style.display = "inline";
+    }
+    if (n == (x.length - 1)) {
+      document.getElementById("nextBtn").innerHTML = "Pošalji";
+    } else {
+      document.getElementById("nextBtn").innerHTML = "Dalje";
+    }
+  
+    fixStepIndicator(n)
+  }
+  
+  function nextPrev(n) {
+  
+    var x = document.getElementsByClassName("tab");
+  
+    if (n == 1 && !validateForm()) return false;
+   
+    x[currentTab].style.display = "none";
+   
+    currentTab = currentTab + n;
+   
+    if (currentTab >= x.length) {
+    
+      document.getElementById("regForm").submit();
+      return false;
+    }
+  
+    showTab(currentTab);
+  }
+  
+  function validateForm() {
+  
+    var x, y, i, valid = true;
+    x = document.getElementsByClassName("tab");
+    y = x[currentTab].getElementsByTagName("input");
+    
+    for (i = 0; i < y.length; i++) {
+  
+      if (y[i].value == "") {
+     
+        y[i].className += " invalid";
+        
+        valid = false;
+      }
+    }
+   
+    if (valid) {
+      document.getElementsByClassName("step")[currentTab].className += " finish";
+    }
+    return valid; 
+  }
+  
+  function fixStepIndicator(n) {
+    
+    var i, x = document.getElementsByClassName("step");
+    for (i = 0; i < x.length; i++) {
+      x[i].className = x[i].className.replace(" active", "");
+    }
+   
+    x[n].className += " active";
+  }
+  </script>
+
+
+<br>
+<footer>
+<p>©Copyright 2021 Bellot</p>
+</footer>
+</body>
+
+
+
+</html>

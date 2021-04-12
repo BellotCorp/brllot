@@ -1,0 +1,226 @@
+body{
+  margin:0;
+  background-color: #181a1b;
+  background-repeat:repeat;
+  background-size:cover;
+}
+
+header{
+    border-bottom:10px ridge #373C3E;
+    height: 250px;
+    width: 100%;
+    background-image: linear-gradient(#0b0f0d,#066d0b);
+    }
+
+footer{
+     
+    bottom: 0;
+    background-image: linear-gradient(#0b0f0d,#066d0b);
+    color: white;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    border-top:3px solid #ffffff;
+    font-size: 20px;
+    
+    }
+
+.naslov{
+  color:white;
+  font-family: Naslov;
+  font-size:180px;
+  text-align: center;
+  margin-top:10px;
+  margin-bottom:-40px;
+  text-shadow: 5px 5px 4px #52af55
+  }
+
+@font-face {
+    font-family: Naslov;
+    src: url(mojfont.ttf);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: linear-gradient(#0b0f0d,#066d0b);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size:25px
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+
+  .sada {
+    background-color: #4CAF50;
+  }
+  img.n{
+    vertical-align: baseline;
+  }
+
+  .sredina{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .smece { 
+    height: 250px;
+    position: relative;
+  }
+
+  #regForm {
+    text-align: center;
+    background-color: #262a2c;
+    margin: 10px auto;
+    font-family: Raleway;
+    padding: 10px;
+    width: 26%;
+    min-width: 50px;
+  }
+
+  input.invalid {
+    background-color: #ffdddd;
+  }
+
+  .tab {
+    display: none;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+    
+  }
+
+  
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+form {
+  text-align: left;
+}
+
+
+input {
+  display: inline-block;
+  width: 80%;
+  height: 25px;
+  font-family: 'Times New Roman', Times, serif;
+ }
+ 
+.tekst{
+  font-size: 25px;
+  color: white;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  padding:10px;
+}
+.tekst2{
+  font-size: 25px;
+  color: white;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 20px;
+}
+.tekst2 h1{
+  font-style: italic;
+  color: #4CAF50;
+}
+table, th, td {
+  border: 2px solid #4CAF50;
+  border-collapse: collapse;
+  padding: 10px;
+}
+th, td {
+  padding: 5px;
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  width: 50%;
+}
+
+.citat{
+  display:block;
+  align-items: center;
+  color: black;
+  border: 10px solid white;
+  text-align:center;
+  background-color: grey;
+  font-size: 30px;
+  font-family:'Times New Roman', Times, serif;
+}
+.images{
+  white-space:nowrap;
+  display:block;
+  text-align: center;
+}
+pre{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+
+
+
+.tekst img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+iframe{
+  display:block;
+  margin-left: auto;
+  margin-right:auto;
+  width: 1005px;
+}
+
+.img2{
+  border:2px solid white;
+}
+
